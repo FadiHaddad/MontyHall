@@ -21,7 +21,7 @@ public class GameController {
             String[] stringValues = gameService.startSimulation(Integer.parseInt(amount));
             return new ResponseEntity<>(stringValues,HttpStatus.OK);
         }catch (IllegalArgumentException exception){
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Bad Request",HttpStatus.BAD_REQUEST);
         }
     }
 }
